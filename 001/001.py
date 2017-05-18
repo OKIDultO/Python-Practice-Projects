@@ -6,7 +6,5 @@
 for x in range(1, 5):
 	for y in range(1, 5):
 		for z in range(1, 5):
-			if (x == y) or (y == z) or (x == z):
-				pass
-			else:
+			if (x != y) and (y != z) and (x != z):
 				print('%d%d%d' % (x, y, z))
