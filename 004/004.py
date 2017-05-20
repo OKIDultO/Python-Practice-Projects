@@ -12,7 +12,8 @@ day = int(input('請輸入日期：'))
 days_a_month = [31, 28, 31, 30 ,31, 30, 31, 31, 30, 31, 30, 31]
 for i in range(month-1):
 	counter += days_a_month[i]
-	
+
+#閏年判斷
 if ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)) and (month > 2):
 	counter += 1
 
