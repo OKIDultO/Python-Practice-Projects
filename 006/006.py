@@ -6,3 +6,14 @@ F0 = 0     (n=0)
 F1 = 1    (n=1)
 Fn = F[n-1]+ F[n-2](n=>2)
 '''
+
+x = int(input("请输入想得知的斐波那契数列项数："))
+
+#预设头两项斐波那契数列
+fib_seq = [0, 1]
+
+if x > 2:
+	for i in range(2, x):
+		fib_seq.append(fib_seq[-2] + fib_seq[-1])
+
+print("前%d个斐波那契数列为%s" % (x, fib_seq))
