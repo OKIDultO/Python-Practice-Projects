@@ -5,7 +5,6 @@
 
 import math
 
-n = 100
 list = []
 
 for i in range(101, 201):
@@ -13,7 +12,6 @@ for i in range(101, 201):
 	for j in range(2, int(math.sqrt(i)+1)):
 		if i % j == 0:
 			list.pop()
-			n -= 1
 			break
 	
-print("一共有%d个素数。\n他们分别是：%s" %(n, list))
+print("一共有%d个素数。\n他们分别是：%s" %(len(list), list))
