@@ -3,11 +3,9 @@
 程序分析：利用for循环控制100-999个数，每个数分解出个位，十位，百位。
 '''
 
-list = []
-for i in range(1, 10):
-	for j in range(10):
-		for k in range(10):
-			if (i**3 + j**3 + k**3) == (i * 100 + j * 10 + k):
-				list.append(i * 100 + j * 10 + k)
+print('在100-999之间的"水仙花数"为：', end = "")
 
-print('在100-900之间的"水仙花数"为：%s' %list)
+for i in range(100, 1000):
+	x = str(i)
+	if int(x[0]) ** 3 + int(x[1]) ** 3 + int(x[2]) ** 3 == i:
+		print(i, end = "  ")
