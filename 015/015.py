@@ -5,9 +5,4 @@
 
 x = int(input("请输入成绩:"))
 
-if x >= 90:
-	print("A")
-elif x >= 60:
-	print("B")
-else:
-	print("C")
+print("A" if x>=90 else ("B" if x>=60 else "C"))
