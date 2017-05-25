@@ -6,15 +6,14 @@
 (3)如果n不能被k整除，则用k+1作为k的值,重复执行第一步。
 '''
 
+#求最小质数k
 def Pri_Num(x):
-	k = 2
-	while k < x:
+	for k in range(2, int(x+1)):
 		if x % k == 0:
 			break
-		else:
-			k += 1
 	return k
 
+#分解质因数
 def Number(x):
 	if Pri_Num(x) == x:
 		print(int(x))
@@ -23,6 +22,5 @@ def Number(x):
 		return Number(x/Pri_Num(x))		
 
 x = int(input("请输入一个正整数："))
-
 print("分解质因数结果为：%d = " %x, end = "")
 Number(x)
