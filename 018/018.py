@@ -3,20 +3,21 @@
 程序分析：关键是计算出每一项的值。
 '''
 
-def Number(x):
-	n = a
-	while len(str(n)) < x:
-		n = n * 10 + a
-	return n
+import functools
 
+def Number():
+	for i in range(x):
+		num.append(int(str(a) * (i+1)))
+	return num
+
+num = []
 a = int(input("循环数："))
 x = int(input("相加数个数："))
-sum = 0
 
-for i in range(x):
-	print("%d" %Number(i+1), end = "")
-	sum += Number(i+1)
-	if (i + 1) < x:
-		print(" + ", end = "")
-	
+#reduce() & lambda()函数
+sum = functools.reduce(lambda x, y : x+y, Number())
+
+print(num[0], end = "")
+for i in range(1, x):
+	print(" + %d" %num[i], end = "")
 print(" = %d" %sum)
