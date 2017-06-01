@@ -5,11 +5,7 @@
 
 x = input("请输入一个五位数：")
 
-list = list(x)
-
-for i in range(len(list)):
-	if list[i] != list[len(list)- i -1]:
-		print("不", end = "")
-		break
+if x != x[::-1]:
+	print("不", end = "")
 
 print("是回文数")
