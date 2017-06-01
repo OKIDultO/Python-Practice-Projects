@@ -3,10 +3,12 @@
 程序分析：学会分解出每一位数。
 '''
 
-x = str(input("请输入一个不多于5位的正整数："))
+x = list(input("请输入一个不多于5位的正整数："))
 
 print("它是%d位数" %len(x))
 print("逆序打印：", end = "")
 
+x.reverse()
+
 for i in range(len(x)):
-	print(x[len(x) - i - 1], end = "")
+	print(x[i], end = "")
