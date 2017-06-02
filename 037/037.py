@@ -6,9 +6,7 @@
 def Rank(l, x):
 	for i in range(x, len(l)):
 		if l[x] > l[i]:
-			t = l[x]
-			l[x] = l[i]
-			l[i] = t
+			l[x],l[i] = l[i],l[x]
 	print(l[x], end = "  ")
 
 l = []
