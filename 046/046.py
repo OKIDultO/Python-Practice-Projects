@@ -3,10 +3,11 @@
 程序分析：无
 '''
 
-import math
+print('如果输入的数字的平方小于50，程序将停止运行。')
 
 x = 8
 
-while math.pow(x, 2) >= 50:
+while x * x >= 50:
 	x = int(input("请输入一个数："))
-	print("数字的平方为：%d" %math.pow(x, 2))
+	pow = x * x
+	print("数字的平方为：%d" %pow)
